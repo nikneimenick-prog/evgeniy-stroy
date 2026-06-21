@@ -51,10 +51,70 @@ footer {
     padding: 20px;
 }
 </style>
+<style>
+.menu-btn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+    z-index:1000;
+}
 
+.menu{
+    display:none;
+    position:fixed;
+    top:60px;
+    right:15px;
+    background:white;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.menu a{
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    color:black;
+}
+    .menu-btn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+    z-index:1000;
+}
+
+.menu{
+    display:none;
+    position:fixed;
+    top:60px;
+    right:15px;
+    background:white;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.menu a{
+    display:block;
+    padding:10px;
+    text-decoration:none;
+    color:black;
+}
+</style>
 </head>
 <body>
+<div class="menu-btn" onclick="toggleMenu()">⋮</div>
 
+<div class="menu" id="menu">
+    <a href="#" onclick="showWorks()">Наши работы</a>
+    <a href="#" onclick="showContacts()">Связь с нами</a>
+</div>
 <header>
     <h1>СТРОИТЕЛЬНАЯ БРИГАДА ЕВГЕНИЙ</h1>
     <p>Строительство и ремонт любой сложности</p>
@@ -102,7 +162,7 @@ footer {
         </p>
     </div>
 
-    <div class="card">
+    <div class="card" id="contacts" style="display:none;">>
         <h2>Контакты</h2>
         <p><strong>Директор:</strong> Евгений</p>
         <p class="phone">+7 (977) 505-04-75</p>
@@ -114,7 +174,7 @@ footer {
     © 2025 Строительная бригада Евгений
 </footer>
 
-<section>
+<section id="works" style="display:none;">
   <h2>Наши работы</h2>
 
   <div class="card">
@@ -199,5 +259,28 @@ footer {
 </div>
 </div>
 </section>
+    <script>
+function toggleMenu(){
+    let menu = document.getElementById("menu");
+    menu.style.display =
+    menu.style.display === "block" ? "none" : "block";
+}
+
+function showWorks(){
+    document.getElementById("works").style.display = "block";
+    document.getElementById("contacts").style.display = "none";
+
+    document.getElementById("works")
+    .scrollIntoView({behavior:"smooth"});
+}
+
+function showContacts(){
+    document.getElementById("contacts").style.display = "block";
+    document.getElementById("works").style.display = "none";
+
+    document.getElementById("contacts")
+    .scrollIntoView({behavior:"smooth"});
+}
+</script>  
 </body>
 </html>
