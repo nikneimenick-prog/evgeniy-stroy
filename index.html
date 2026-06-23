@@ -3,90 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1>Строительная бригада по москве и московской области</h1>
+<title>Строительная бригада Москва и МО</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
-    color: #333;
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    color:#333;
 }
 
-header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+.hero img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
 }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px 20px;
+header{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
 }
 
-ul li {
-    margin: 10px 0;
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-.phone {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0066cc;
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-</style>
-<style>
 .menu-btn{
     position:fixed;
     top:15px;
     right:15px;
     font-size:35px;
     cursor:pointer;
-    color:black;
-    z-index:9999;
-}
-}
-
-.menu{
-    display:none;
-    position:fixed;
-    top:60px;
-    right:15px;
-    background:white;
-    border-radius:10px;
-    padding:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.2);
-}
-
-.menu a{
-    display:block;
-    padding:10px;
-    text-decoration:none;
-    color:black;
-}
-    .menu-btn{
-    position:fixed;
-    top:15px;
-    right:15px;
-    font-size:30px;
-    cursor:pointer;
-    color:black;
     z-index:1000;
 }
 
@@ -97,202 +56,116 @@ footer {
     right:15px;
     background:white;
     border-radius:10px;
-    padding:10px;
     box-shadow:0 0 10px rgba(0,0,0,.2);
+    overflow:hidden;
 }
 
 .menu a{
     display:block;
-    padding:10px;
-    text-decoration:none;
+    padding:12px 20px;
     color:black;
+    text-decoration:none;
 }
-.hero-image img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    display:block;
+
+.menu a:hover{
+    background:#f0f0f0;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
 }
 </style>
 </head>
+
 <body>
+
 <div class="menu-btn" onclick="toggleMenu()">⋮</div>
 
 <div class="menu" id="menu">
-    <a href="#" onclick="showWorks()">Наши работы</a>
-    <a href="#" onclick="showContacts()">Связь с нами</a>
+    <a href="works.html">Наши работы</a>
+    <a href="contacts.html">Связь с нами</a>
 </div>
-<div class="hero-image">
+
+<div class="hero">
     <img src="builders.png" alt="Строительная бригада">
 </div>
+
 <header>
     <h1>СТРОИТЕЛЬНАЯ БРИГАДА</h1>
+    <p>Москва и Московская область</p>
     <p>Строительство и ремонт любой сложности</p>
 </header>
 
 <section>
-    <div class="card">
-        <h2>О нас</h2>
-        <p>
-            Выполняем строительные и ремонтные работы качественно,
-            аккуратно и в срок. Работаем с квартирами, домами,
-            офисами и коммерческими объектами.
-        </p>
-    </div>
 
-    <div class="card">
-        <h2>Наши услуги</h2>
-        <ul>
-            <li>Капитальный ремонт</li>
-            <li>Косметический ремонт</li>
-            <li>Укладка плитки</li>
-            <li>Штукатурка и шпаклевка</li>
-            <li>Покраска помещений</li>
-            <li>Электромонтажные работы</li>
-            <li>Сантехнические работы</li>
-            <li>Монтаж гипсокартона</li>
-            <li>Укладка ламината и паркета</li>
-            <li>Кровельные работы</li>
-            <li>Фасадные работы</li>
-            <li>Строительство домов</li>
-            <li>Бетонные работы</li>
-            <li>Демонтажные работы</li>
-            <li><strong>И любые другие строительные работы</strong></li>
-        </ul>
-    </div>
+<div class="card">
+<h2>О нас</h2>
+<p>
+Выполняем строительные и ремонтные работы качественно,
+аккуратно и в срок. Работаем с частными домами,
+дачами, участками и коммерческими объектами.
+</p>
+</div>
 
-    <div class="card">
-        <h2>Почему выбирают нас</h2>
-        <p>
-            ✔ Качественное выполнение работ<br>
-            ✔ Соблюдение сроков<br>
-            ✔ Опытные специалисты<br>
-            ✔ Честные цены<br>
-            ✔ Индивидуальный подход к каждому клиенту
-        </p>
-    </div>
+<div class="card">
+<h2>Наши услуги</h2>
 
-    <div class="card" id="contacts" style="display:none;">
-        <h2>Контакты</h2>
-        <p><strong>Директор:</strong> Евгений</p>
-        <p>мы в месенджерах.</p>
-        <p>whatsapp telegram</p>
-        <p class="phone">+7 (977) 505-04-75</p>
-        <p>Звоните для консультации и расчета стоимости работ.</p>
-    </div>
+<ul>
+<li>Строительство домов</li>
+<li>Кровельные работы</li>
+<li>Фундаментные работы</li>
+<li>Установка заборов</li>
+<li>Строительство бань</li>
+<li>Навесы и беседки</li>
+<li>Монтаж сайдинга</li>
+<li>Укладка тротуарной плитки</li>
+<li>Отмостка вокруг дома</li>
+<li>Ремонт и реконструкция домов</li>
+<li>Замена полов</li>
+<li>И другие строительные работы</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Почему выбирают нас</h2>
+
+<p>
+✔ Работаем качественно<br>
+✔ Соблюдаем сроки<br>
+✔ Опыт более 10 лет<br>
+✔ Честные цены<br>
+✔ Индивидуальный подход
+</p>
+
+</div>
+
 </section>
 
 <footer>
-    © 2025 Строительная бригада Евгений
+© 2025 Строительная бригада Евгений
 </footer>
 
-<section id="works" style="display:none;">
-  <h2>Наши работы</h2>
-
-  <div class="card">
-    <h3>Заливка фундамента</h3>
-    <img src="3F08FF19-DCA6-4C11-9373-358283073428.png" style="width:100%;">
-  
-
-  <div class="card">
-    <h3>Пристройка к дому</h3>
-   <img src="425ABF8E-3C6A-445B-973E-5F3A437C7AB1.png" style="width:100%;">
-    
-  <div class="card">
-    <h3>Ремонт крыши</h3>
-  <img src="E35CF44F-2FD8-45D8-9FFB-AA273D1C9CC6.png" style="width:100%;">
-  </div> 
-<div class="card">
-  <h3>Реставрация крыши</h3>
-  <img src="17A1FAA6-8F7B-4482-AE2B-1FB72CE48E87.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Реставрация дома</h3>
-  <img src="3914B3A8-17CF-457C-B841-BD4729818703.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Монтаж сайдинга</h3>
-  <img src="D8E45D7D-A1DA-441E-A2D0-C8D52D691A44.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Замена пола</h3>
-  <img src="556BECE1-A50B-476E-84D8-F47422E183F6.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Установка забора</h3>
-  <img src="4DC2718B-395D-43B1-B816-E0BD12C77E63.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Укладка тротуарной плитки</h3>
-  <img src="CFEF84F1-2927-4246-B3E2-8B24599D18B3.png" style="width:100%;">
-<div class="card">
-  <h3>Забор из профнастила</h3>
-  <img src="images/08DF3428-3715-4B10-BB98-25C76F0F8D8C.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Навес</h3>
-  <img src="images/20783C74-E411-48F0-B99E-1154FAE22B41.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Беседка</h3>
-  <img src="images/23FC5C81-3F2A-45C6-84C5-F3B647E7174F.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Баня</h3>
-  <img src="images/3142109E-1B04-4A43-9664-74C6F73F643E.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Кирпичный забор</h3>
-  <img src="images/354D6D9A-7131-469B-8A4B-08D187B3FA17.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Монтаж кровли из металлочерепицы</h3>
-  <img src="images/5E3E2FD7-04E2-47AC-BAE6-497171E7B17B.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Дом из газобетонных блоков</h3>
-  <img src="images/D7AEC578-A50F-42EE-B5EA-9DD75CB961F9.png" style="width:100%;">
-</div>
-
-<div class="card">
-  <h3>Заливка фундамента под заезд транспортного средства</h3>
-  <img src="images/E7ECB630-8E88-4E3F-9B05-37C1F2A7DC0A.png" style="width:100%;">
-</div>
-</div>
-</section>
-    <script>
+<script>
 function toggleMenu(){
-    let menu = document.getElementById("menu");
-    menu.style.display =
-    menu.style.display === "block" ? "none" : "block";
+  let menu=document.getElementById("menu");
+
+  if(menu.style.display==="block"){
+      menu.style.display="none";
+  }else{
+      menu.style.display="block";
+  }
 }
+</script>
 
-function showWorks(){
-    document.getElementById("works").style.display = "block";
-    document.getElementById("contacts").style.display = "none";
-
-    document.getElementById("works")
-    .scrollIntoView({behavior:"smooth"});
-}
-
-function showContacts(){
-    document.getElementById("contacts").style.display = "block";
-    document.getElementById("works").style.display = "none";
-
-    document.getElementById("contacts")
-    .scrollIntoView({behavior:"smooth"});
-}
-</script>  
 </body>
 </html>
+    
+
+
+      
+            
